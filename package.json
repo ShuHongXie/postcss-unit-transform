@@ -1,0 +1,45 @@
+{
+  "name": "postcss-unit-transform",
+  "version": "0.0.0",
+  "description": "PostCSS plugin transform unit to other unit",
+  "keywords": ["postcss", "css", "postcss-plugin", "postcss-unit-transform"],
+  "scripts": {
+    "test": "jest --coverage && eslint ."
+  },
+  "author": "谢树宏 <384180258@qq.com>",
+  "license": "MIT",
+  "repository": "htttps://github.com/ShuHongXie/postcss-unit-transform",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.3.0"
+  },
+  "devDependencies": {
+    "clean-publish": "^3.4.2",
+    "eslint": "^8.0.1",
+    "eslint-plugin-jest": "^25.2.2",
+    "jest": "^27.3.1",
+    "postcss": "^8.3.11"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": ["eslint:recommended", "plugin:jest/recommended"],
+    "rules": {
+      "jest/expect-expect": "off"
+    }
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 100
+      }
+    }
+  }
+}
