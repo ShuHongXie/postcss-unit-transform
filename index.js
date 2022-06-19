@@ -1,22 +1,29 @@
+const postcss = require("postcss");
+
 /**
  * @type {import('postcss').PluginCreator}
  */
-module.exports = (opts = {}) => {
+// module.exports = plugin;
+
+const plugin = (opts = {}) => {
   // Work with options here
-
+  console.log("start execute");
+  debugger;
   return {
-    postcssPlugin: 'postcss-unit-transform',
-    /*
-    Root (root, postcss) {
-      // Transform CSS AST here
-    }
-    */
+    postcssPlugin: "postcss-unit-transform",
 
-    /*
-    Declaration (decl, postcss) {
+    Root(root, postcss) {
+      console.log("----root-----");
+      console.log(root);
+      debugger;
+      // Transform CSS AST here
+    },
+
+    Declaration(decl, postcss) {
+      console.log("-----declaration------");
+      console.log(decl);
       // The faster way to find Declaration node
-    }
-    */
+    },
 
     /*
     Declaration: {
@@ -25,7 +32,15 @@ module.exports = (opts = {}) => {
       }
     }
     */
-  }
-}
+  };
+};
+plugin.postcss = true;
 
-module.exports.postcss = true
+console.log("-----");
+postcss([plugin])
+  .process("a { color: black }", { from: undefined })
+  .then((result) => {
+    // console.log(result.css);
+  });
+
+// module.exports.postcss = true;
