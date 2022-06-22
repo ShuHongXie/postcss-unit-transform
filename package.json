@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "test": "jest --coverage && eslint .",
-    "start": "node --inspect index.js"
+    "start": "node test.js"
   },
   "author": "谢树宏 <384180258@qq.com>",
   "license": "MIT",
@@ -18,15 +18,12 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "peerDependencies": {
-    "postcss": "^8.3.0"
-  },
   "devDependencies": {
     "clean-publish": "^3.4.2",
     "eslint": "^8.0.1",
     "eslint-plugin-jest": "^25.2.2",
     "jest": "^27.3.1",
-    "postcss": "^8.3.11"
+    "postcss": "7.0.39"
   },
   "eslintConfig": {
     "parserOptions": {
